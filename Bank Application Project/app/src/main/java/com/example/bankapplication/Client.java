@@ -27,4 +27,25 @@ public class Client {
         }
         return s;
     }
+
+    @Override
+    public String toString()
+    {
+        String s = "";
+        s += "not: " + this.not + "\n";
+        s += "history: {";
+        for(int i = 0; i < this.history.length; i++){
+            if(this.history[i] == null){
+                s += "null";
+            }
+            else{
+                s += this.history[i].toString();
+            }
+            if(i < this.history.length - 1){
+                s += ", ";
+            }
+        }
+        s += "}";
+        return s;
+    }
 }

@@ -22,4 +22,12 @@ public class Transaction {
     void setType(String type){
         this.type = type;
     }
+
+    @Override
+    public String toString()
+    {
+        String s = "";
+        s += "Type:" + type + " Amount:" + amount;
+        return s;
+    }
 }
